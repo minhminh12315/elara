@@ -11,9 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('room_amenities_mappings', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('room_amenities_mapping', function (Blueprint $table) {
+            $table->foreignId('RoomID')->constrained('rooms')->onDelete('cascade');
+            $table->foreignId('AmenityID')->constrained('amenities')->onDelete('cascade');
+            $table->primary(['RoomID', 'AmenityID']);
         });
     }
 
