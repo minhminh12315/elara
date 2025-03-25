@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('BookingID')->constrained('bookings')->onDelete('cascade');
-            $table->date('IssueDate');
-            $table->decimal('TotalAmount', 15, 2);
-            $table->enum('PaymentMethod', ['Cash', 'Card', 'EWallet']);
-            $table->enum('Status', ['Unpaid', 'Paid'])->default('Unpaid');
+            $table->foreignId('bookingID')->constrained('bookings')->onDelete('cascade');
+            $table->date('issueDate');
+            $table->decimal('totalAmount', 15, 2);
+            $table->enum('paymentMethod', ['cash', 'card', 'eWallet']);
+            $table->enum('status', ['unpaid', 'paid'])->default('unpaid');
             $table->timestamps();
         });
     }

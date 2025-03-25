@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('hotel_amenities_mapping', function (Blueprint $table) {
-            $table->foreignId('HotelID')->constrained('hotels')->onDelete('cascade');
-            $table->foreignId('AmenityID')->constrained('amenities')->onDelete('cascade');
-            $table->primary(['HotelID', 'AmenityID']);
+            $table->foreignId('hotelID')->constrained('hotels')->onDelete('cascade');
+            $table->foreignId('amenityID')->constrained('amenities')->onDelete('cascade');
+            $table->primary(['hotelID', 'amenityID']);
         });
     }
 

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('amenities', function (Blueprint $table) {
             $table->id();
-            $table->string('Name');
-            $table->text('Description')->nullable();
-            $table->string('Type');
-            $table->integer('ObjectID');
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->string('type');
+            $table->integer('objectId');
             $table->timestamps();
         });
     }

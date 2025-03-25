@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('RoomID')->constrained('rooms')->onDelete('cascade');
-            $table->date('BookingDate');
-            $table->decimal('RoomPrice', 10, 2);
-            $table->date('ExpectedCheckInDate')->nullable();
-            $table->date('ExpectedCheckOutDate')->nullable();
-            $table->date('CheckInDate')->nullable();
-            $table->date('CheckOutDate')->nullable();
-            $table->enum('Status', ['Pending', 'CheckedIn', 'CheckedOut', 'Cancelled'])->default('Pending');
+            $table->foreignId('roomID')->constrained('rooms')->onDelete('cascade');
+            $table->date('bookingDate');
+            $table->decimal('roomPrice', 10, 2);
+            $table->date('expectedCheckInDate')->nullable();
+            $table->date('expectedCheckOutDate')->nullable();
+            $table->date('checkInDate')->nullable();
+            $table->date('checkOutDate')->nullable();
+            $table->enum('status', ['pending', 'checkedIn', 'checkedOut', 'cancelled'])->default('pending');
             $table->timestamps();
         });
     }

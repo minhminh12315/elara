@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('revenues', function (Blueprint $table) {
             $table->id();
-            $table->string('ReferenceType');
-            $table->integer('ReferenceID');
-            $table->decimal('RevenueAmount', 15, 2);
-            $table->string('RevenueType');
-            $table->date('TransactionDate');
-            $table->text('Remarks')->nullable();
+            $table->string('referenceType');
+            $table->integer('referenceID');
+            $table->decimal('revenueAmount', 15, 2);
+            $table->string('revenueType');
+            $table->date('transactionDate');
+            $table->text('remarks')->nullable();
             $table->timestamps();
         });
     }

@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('hotel_owners', function (Blueprint $table) {
-            $table->foreignId('UserID')->constrained('users')->onDelete('cascade');
-            $table->foreignId('HotelID')->constrained('hotels')->onDelete('cascade');
-            $table->primary(['UserID', 'HotelID']);
+            $table->foreignId('userID')->constrained('users')->onDelete('cascade');
+            $table->foreignId('hotelID')->constrained('hotels')->onDelete('cascade');
+            $table->primary(['userID', 'hotelID']);
         });
     }
 

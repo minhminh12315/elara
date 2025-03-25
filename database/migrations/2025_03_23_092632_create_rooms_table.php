@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('RoomType');
-            $table->decimal('Price', 10, 2);
-            $table->foreignId('HotelID')->constrained('hotels')->onDelete('cascade');
-            $table->enum('Status', ['Available', 'Occupied', 'Maintenance'])->default('Available');
-            $table->integer('Capacity');
+            $table->string('roomType');
+            $table->decimal('price', 10, 2);
+            $table->foreignId('hotelId')->constrained('hotels')->onDelete('cascade');
+            $table->enum('status', ['available', 'occupied', 'maintenance'])->default('available');
+            $table->integer('capacity');
             $table->timestamps();
         });
     }
