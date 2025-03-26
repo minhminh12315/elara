@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('address');
             $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
-            $table->foreignId('region_id')->constrained('regions')->onDelete('cascade');
+            $table->foreignId('state_id')->constrained('states')->onDelete('cascade');
             $table->integer('stars')->nullable();
             $table->decimal('rating', 10, 2)->nullable();
             $table->timestamps();
