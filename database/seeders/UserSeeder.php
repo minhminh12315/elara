@@ -17,7 +17,7 @@ class UserSeeder extends Seeder
             'name' => 'Duc An',
             'email' => 'an.duc.0104@gmail.com',
             'password' => bcrypt('123123123'),
-            'phoneNumber' => '0828818334',
+            'phone_number' => '0828818334',
             'role' => 'admin',
             'address' => 'Hanoi, Vietnam'
         ]);
