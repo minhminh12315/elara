@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
         ]);
         User::create([
             'name' => 'Quang Minh',
-            'email' => 'minhminh2005@gmail.com',
+            'email' => 'ddqminh205@gmail.com',
             'password' => bcrypt('123123123'),
             'role' => 'admin',
             'address' => 'Hanoi, Vietnam'
