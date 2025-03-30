@@ -13,11 +13,16 @@
 
             <flux:navlist variant="outline">
                 <flux:navlist.group :heading="__('Platform')" class="grid">
+                    
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>{{ __('Dashboard') }}</flux:navlist.item>
+
+                    <flux:navlist.item icon="home" :href="route('country')" :current="request()->routeIs('country')" wire:navigate>{{ __('Country') }}</flux:navlist.item>
+
                 </flux:navlist.group>
             </flux:navlist>
 
             <flux:spacer />
+
 
             <flux:navlist variant="outline">
                 <flux:navlist.item icon="folder-git-2" href="https://github.com/laravel/livewire-starter-kit" target="_blank">
